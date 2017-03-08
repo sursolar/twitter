@@ -89,6 +89,8 @@ class Twitter extends tmhOAuth {
 		$this->parent_config['use_ssl']    = $this->tconfig['USE_SSL'];
 		$this->parent_config['user_agent'] = 'LTTW '.parent::VERSION;
 
+		$this->parent_config['curl_proxy'] = $this->tconfig['CURL_PROXY'];
+
 		$config = array_merge($this->parent_config, $this->tconfig);
 
 		parent::__construct($this->parent_config);
